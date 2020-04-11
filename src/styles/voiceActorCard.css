@@ -1,0 +1,50 @@
+.voiceActorCardContainer{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33.33%33.33%33.33%;
+    width: 100%;
+    height: inherit;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.card{
+    min-height: 100% !important;
+    background: #292929 !important;
+    color: aliceblue !important;
+}
+
+.card-img{
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.card-title{
+    flex-direction: column;
+    vertical-align: bottom !important;
+    margin: 0 !important;
+    height: 100% !important;
+    margin-bottom: 0.5em !important;
+    margin-top: 0.5em !important;
+}
+
+.cardContainer{
+    max-width: 300px;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+#voiceActor{
+    grid-template-columns: 2/3;
+}
+
+#characterOne{
+    float: left;
+    grid-template-columns: 1/2;
+
+}
+#characterTwo{
+    float: right;
+    grid-template-columns: 3/4;
+}

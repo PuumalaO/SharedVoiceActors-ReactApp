@@ -1,0 +1,39 @@
+.selectedImagesContainer{
+    display: grid;
+    grid-template-columns: 45%10%45%;
+    width:100%;
+    margin-bottom: 5em;
+}
+
+.selectedTitlesContainer{
+    display: grid;
+    grid-template-columns: 45%10%45%;
+    width:100%;
+    margin-bottom: 1em;
+}
+
+.selectedContainer{
+    width: auto;
+    max-height: 500px;
+    margin: auto;
+}
+
+#selectedLeft #leftHeader{
+    grid-template-columns: 1/2;
+}
+#filler{
+    grid-template-columns: 2/3;
+
+}
+#selectedRight #rightHeader{
+    float: right;
+    grid-template-columns: 3/4;
+}
+
+#selectedLeft{
+    height: 100%;
+}
+
+#selectedRight{
+    height: 100%;
+}

@@ -1,0 +1,14 @@
+.voiceActorsContainer{
+    margin: auto;
+    display:grid;
+    width: 100%;
+}
+
+#rightVoiceActor{
+    float: right;
+}
+
+.headerContainer{
+    display: grid;
+    grid-template-columns: 33%33%33%;
+}

@@ -1,0 +1,13 @@
+.mainHeaderContainer a, b{
+    color:white;
+}
+.clearButtonContainer{
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.clearButton{
+    margin: auto !important;
+    float: none !important;
+}

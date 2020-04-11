@@ -1,0 +1,16 @@
+.cardContainer {
+  width: 100%;
+  height: 100% !important;
+}
+
+.cardImage {
+  object-fit: cover;
+  margin: 0;
+  width: auto !important;
+  max-height: auto !important;
+  max-width: 100% !important;
+}
+
+#noTitle {
+  margin-top: 3em;
+}
