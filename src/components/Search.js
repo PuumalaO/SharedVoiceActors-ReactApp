@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import "../styles/search.css";
@@ -7,9 +7,18 @@ const Search = (props) => {
   const [search, setSearch] = useState("");
   const [searching, setSearching] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") handleSubmit();
+    });
+    return () => {
+      window.removeEventListener("keydown");
+    };
+  }, []);
+
   const handleSubmit = (event) => {
     setSearching(true);
-    event.preventDefault();
+    if (event) event.preventDefault();
     fetch("https://api.jikan.moe/v3/search/anime?q=" + search)
       .then((res) => res.json())
       .then((result) => {
@@ -35,13 +44,13 @@ const Search = (props) => {
               value={search}
               onChange={handleChange}
             />
-          {props.disable ? (
-            <Button id="searchButton" disabled type="submit">
-              Search
-            </Button>
-          ) : (
-            <Button type="submit">Search</Button>
-          )}
+            {props.disable ? (
+              <Button id="searchButton" disabled type="submit">
+                Search
+              </Button>
+            ) : (
+              <Button type="submit">Search</Button>
+            )}
           </div>
         </Form.Row>
       </Form>
@@ -49,7 +58,7 @@ const Search = (props) => {
       {searching ? (
         <div>
           <div className="loading">
-            <PropagateLoader color={"#007bff"} />
+            <PropagateLoader color={"black"} />
           </div>
         </div>
       ) : (

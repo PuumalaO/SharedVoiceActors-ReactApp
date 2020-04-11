@@ -1,0 +1,33 @@
+.footerContainer{
+    text-align: start;
+    color: aliceblue;
+    background-color: #262626;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: auto 0;
+    
+    text-decoration: none;
+}
+.linkContainer{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    left: 0;
+}
+
+.jikanLink{
+    bottom: 0;
+    
+}
+#githubLinkContainer{
+    text-align: end;
+}
+
+.githubLink{
+    text-decoration: none !important;
+}
+
+.githubImage{
+    margin-left: 1em;
+}

@@ -5,6 +5,7 @@ import SearchResults from "./SearchResults";
 import SelectedTitles from "./SelectedTitles";
 import SharedVoiceActors from './SharedVoiceActors'
 import "../styles/home.css";
+import Footer from "./Footer";
 
 
 export default function Home() {
@@ -37,8 +38,8 @@ export default function Home() {
   return (
     <div>
       <div className={"mainHeaderContainer"}>
-      <a style={{textDecoration: "none"}} href="/"><h1>Shared voice actors?</h1></a>
-      <b style={{fontWeight: 300}}>Select two anime titles and see if they have any shared voice actors</b>
+      <a style={{textDecoration: "none"}} href="/"><h1>Same voice actors?</h1></a>
+      <b style={{fontWeight: 300}}>Select two anime titles and see if they have any voice actors in common!</b>
       </div>
       <Search
        callback={searchCallback}
@@ -60,6 +61,7 @@ export default function Home() {
         firstTitle={firstTitle}
         secondTitle={secondTitle}
        />
+       <Footer/>
     </div>
   );
 }

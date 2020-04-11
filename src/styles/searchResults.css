@@ -1,4 +1,28 @@
 .list-group-item{
     color: white !important;
     background-color: #212121 !important;
+    text-align: left;
+}
+
+.list-group-item:hover{
+    color: white !important;
+    background-color: #292929 !important;
+
+}
+.titleContainer{
+    display: flex;
+    vertical-align: middle;
+}
+.title{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.buttonContainer{
+    display: flex;
+}
+
+.selectButton{
+    float: right;
+    margin-top: auto;
+    margin-bottom: auto;
 }
