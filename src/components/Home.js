@@ -14,7 +14,7 @@ export default function Home() {
   const [secondTitle, setSecondTitle] = useState({})
   const [titlesSelected, setTitlesSelected] = useState(false)
   const searchCallback = (results) => {
-    setSearchResults(results);
+    if(results) setSearchResults(results);
   };
   const searchResultClickCallback = (selected, index)=>{
     const removeIndex = searchResults.findIndex(result => result.title === selected.title)
