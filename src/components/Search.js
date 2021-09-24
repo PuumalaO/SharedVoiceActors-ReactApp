@@ -1,20 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import PropagateLoader from "react-spinners/PropagateLoader";
 import "../styles/search.css";
 
-const Search = (props) => {
+const Search = ({ callback, disable }) => {
   const [search, setSearch] = useState("");
   const [searching, setSearching] = useState(false);
 
-  useEffect(() => {
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") handleSubmit();
-    });
-    return () => {
-      window.removeEventListener("keydown");
-    };
-  }, []);
+  const handleInputKeyDown = (event) => {
+    if (event.key === "Enter") handleSubmit();
+  }
 
   const handleSubmit = (event) => {
     setSearching(true);
@@ -23,7 +18,7 @@ const Search = (props) => {
       .then((res) => res.json())
       .then((result) => {
         setSearching(false);
-        props.callback(result.results);
+        callback(result.results);
       });
   };
 
@@ -43,8 +38,9 @@ const Search = (props) => {
               placeholder="Search for a title"
               value={search}
               onChange={handleChange}
+              onKeyDown={handleInputKeyDown}
             />
-            {props.disable ? (
+            {disable ? (
               <Button id="searchButton" disabled type="submit">
                 Search
               </Button>
